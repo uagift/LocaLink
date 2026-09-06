@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalLink — Find local. Connect local. Support local.</title>
+  <meta name="description" content="Discover local businesses, services, and hidden gems around your community—all in one place.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo" aria-label="LocalLink Home">
+        <span class="logo-icon">🔗</span>
+        <span class="logo-text">Loca<span>Link</span></span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#discover" class="nav-link">Explore</a></li>
+          <li><a href="#featured" class="nav-link">Businesses</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#for-business" class="nav-link">For Businesses</a></li>
+        </ul>
+        <a href="#for-business" class="btn btn-primary nav-cta">List Your Business</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Find local. Connect local. <span class="text-highlight">Support local.</span></h1>
+          <p class="hero-subtitle">
+            Discover local businesses, services, and hidden gems around your community—all in one place.
+          </p>
+
+          <form class="search-box" onsubmit="event.preventDefault();">
+            <div class="search-input-group">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Search businesses, services..." aria-label="Search businesses or services">
+            </div>
+            <div class="location-tag">
+              <span class="loc-icon">📍</span>
+              <span class="loc-text">Kigali</span>
+            </div>
+            <button type="submit" class="btn btn-primary search-btn">Search</button>
+          </form>
+
+          <div class="hero-ctas">
+            <a href="#featured" class="btn btn-primary">Explore Local Businesses →</a>
+            <a href="#for-business" class="btn btn-secondary">List Your Business</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="map-bg"></div>
+          
+          <div class="map-card card-1">
+            <div class="card-icon">☕</div>
+            <div class="card-info">
+              <h3>Umuco Café</h3>
+              <p>⭐ 4.8 • Coffee & Bakery</p>
+            </div>
+            <span class="pin-badge">📍 Near You</span>
+          </div>
+
+          <div class="map-card card-2">
+            <div class="card-icon">👗</div>
+            <div class="card-info">
+              <h3>Imizi Fashion</h3>
+              <p>⭐ 4.7 • Handmade Apparel</p>
+            </div>
+          </div>
+
+          <div class="map-card card-3">
+            <div class="card-icon">🌱</div>
+            <div class="card-info">
+              <h3>Green Basket</h3>
+              <p>⭐ 4.9 • Organic Groceries</p>
+            </div>
+          </div>
+
+          <div class="pulse-pin pin-1">📍</div>
+          <div class="pulse-pin pin-2">📍</div>
+          <div class="pulse-pin pin-3">📍</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover section" id="discover">
+      <div class="container">
+        <div class="section-header">
+          <h2>There's more to your community than you know.</h2>
+          <p>From the café around the corner to the small business you've never heard of, LocalLink makes it easier to discover what's already happening around you.</p>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card" data-category="food">
+            <span class="cat-icon">🍽️</span>
+            <h3>Food & Dining</h3>
+            <p>Cafés, eateries & bakeries</p>
+          </button>
+
+          <button class="category-card" data-category="fashion">
+            <span class="cat-icon">👗</span>
+            <h3>Fashion</h3>
+            <p>Boutiques & handmade wear</p>
+          </button>
+
+          <button class="category-card" data-category="beauty">
+            <span class="cat-icon">💇🏽</span>
+            <h3>Beauty</h3>
+            <p>Salons, spas & wellness</p>
+          </button>
+
+          <button class="category-card" data-category="services">
+            <span class="cat-icon">🛠️</span>
+            <h3>Services</h3>
+            <p>Repairs, trades & home care</p>
+          </button>
+
+          <button class="category-card" data-category="creative">
+            <span class="cat-icon">🎨</span>
+            <h3>Creative</h3>
+            <p>Studios, crafts & design</p>
+          </button>
+
+          <button class="category-card" data-category="shopping">
+            <span class="cat-icon">🛍️</span>
+            <h3>Shopping</h3>
+            <p>Local markets & artisan shops</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured section" id="featured">
+      <div class="container">
+        <div class="section-header">
+          <h2>Discover businesses worth knowing.</h2>
+          <p>Explore top-rated local spots recommended by your neighbors.</p>
+        </div>
+
+        <div class="business-grid">
+          <article class="biz-card">
+            <div class="biz-image-placeholder img-cafe">
+              <span class="biz-badge">Featured</span>
+            </div>
+            <div class="biz-content">
+              <div class="biz-header">
+                <h3>Umuco Café</h3>
+                <span class="biz-rating">⭐ 4.8</span>
+              </div>
+              <p class="biz-location">📍 Kigali</p>
+              <div class="biz-tags">
+                <span>Coffee</span>
+                <span>Breakfast</span>
+                <span>Local</span>
+              </div>
+              <a href="#connect" class="biz-cta">View Business →</a>
+            </div>
+          </article>
+
+          <article class="biz-card">
+            <div class="biz-image-placeholder img-fashion">
+              <span class="biz-badge">Trending</span>
+            </div>
+            <div class="biz-content">
+              <div class="biz-header">
+                <h3>Imizi Fashion</h3>
+                <span class="biz-rating">⭐ 4.7</span>
+              </div>
+              <p class="biz-location">📍 Kigali</p>
+              <div class="biz-tags">
+                <span>Fashion</span>
+                <span>Handmade</span>
+                <span>Apparel</span>
+              </div>
+              <a href="#connect" class="biz-cta">View Business →</a>
+            </div>
+          </article>
+
+          <article class="biz-card">
+            <div class="biz-image-placeholder img-green">
+              <span class="biz-badge">Verified</span>
+            </div>
+            <div class="biz-content">
+              <div class="biz-header">
+                <h3>Green Basket</h3>
+                <span class="biz-rating">⭐ 4.9</span>
+              </div>
+              <p class="biz-location">📍 Kigali</p>
+              <div class="biz-tags">
+                <span>Organic</span>
+                <span>Local Produce</span>
+                <span>Market</span>
+              </div>
+              <a href="#connect" class="biz-cta">View Business →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How LocalLink works</h2>
+          <p>Simple steps to start supporting and connecting with your neighborhood.</p>
+        </div>
+
+        <div class="steps-wrapper">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">🔎</div>
+            <h3>Discover</h3>
+            <p>Find businesses and services around you with clear locations and verified info.</p>
+          </div>
+
+          <div class="step-arrow" aria-hidden="true">→</div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">👀</div>
+            <h3>Explore</h3>
+            <p>Learn about what they offer, view ratings, and browse their local catalogs.</p>
+          </div>
+
+          <div class="step-arrow" aria-hidden="true">→</div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">🤝</div>
+            <h3>Connect</h3>
+            <p>Contact them directly, visit their store, and support your local economy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-local section">
+      <div class="container">
+        <div class="section-header">
+          <h2>When you support local, you strengthen a community.</h2>
+          <p>LocalLink is more than a directory—it is a platform for community resilience.</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="value-icon">🏪</span>
+            <h3>Support Small Businesses</h3>
+            <p>Help local entrepreneurs reach more people without paying high aggregator fees.</p>
+          </div>
+
+          <div class="value-card">
+            <span class="value-icon">🤝</span>
+            <h3>Strengthen Communities</h3>
+            <p>Create lasting connections between neighborhood residents and local service providers.</p>
+          </div>
+
+          <div class="value-card">
+            <span class="value-icon">🌱</span>
+            <h3>Keep Value Local</h3>
+            <p>Encourage people to discover, spend, and reinvest value right back where they live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="for-business section" id="for-business">
+      <div class="container">
+        <div class="business-banner">
+          <div class="banner-content">
+            <span class="banner-badge">For Merchants & Service Providers</span>
+            <h2>Have a local business? Let people find you.</h2>
+            <p>Your business deserves to be discovered. Create your presence on LocalLink and connect directly with customers looking for what you offer.</p>
+
+            <ul class="benefits-list">
+              <li><span>✓</span> Reach more local customers without complex marketing tools</li>
+              <li><span>✓</span> Build trusted visibility with ratings and neighborhood presence</li>
+              <li><span>✓</span> Connect directly with shoppers interested in your offerings</li>
+            </ul>
+
+            <a href="#" class="btn btn-primary cta-light">List Your Business →</a>
+          </div>
+
+          <div class="banner-graphic" aria-hidden="true">
+            <div class="flow-card">Reach More People</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-card">Build Visibility</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-card primary">LocalLink Connection</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo light">
+          <span class="logo-icon">🔗</span>
+          <span class="logo-text">Local<span>Link</span></span>
+        </a>
+        <p>Connecting communities with local businesses, hidden gems, and independent service providers.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#discover">Categories</a></li>
+          <li><a href="#featured">Featured Spots</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Businesses</h4>
+        <ul>
+          <li><a href="#for-business">List Your Business</a></li>
+          <li><a href="#">Merchant Guidelines</a></li>
+          <li><a href="#">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#">About Project</a></li>
+          <li><a href="#">Codveda Internship</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 LocalLink. Built for Codveda Front-End Internship.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
